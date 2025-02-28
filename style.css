@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.carousel-item {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+  display: block;
+  opacity: 1;
+}
+
+.carousel-item.slide-next {
+  animation: slideNext 0.5s ease-in-out;
+}
+
+.carousel-item.slide-prev {
+  animation: slidePrev 0.5s ease-in-out;
+}
+
+@keyframes slideNext {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slidePrev {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.nav-dot {
+  @apply w-3 h-3 rounded-full bg-gray-300 transition-all duration-300;
+}
+
+.nav-dot.active {
+  @apply bg-blue-500 w-8;
+}
+
+/* Navigation button styles */
+.prev-button,
+.next-button {
+  @apply shadow-sm;
+  background-color: rgba(219, 234, 254, 0.9); /* Light blue with slight transparency */
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: rgba(191, 219, 254, 1); /* Slightly darker on hover */
+}

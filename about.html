@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillRank - About Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <nav class="bg-white w-full z-50 top-0 left-0 pt-2">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+
+        <!-- Mobile Menu Button (Left Side) -->
+        <button type="button"
+          class="lg:hidden inline-flex items-center  p-2 w-10 h-10 justify-center text-gray-500 rounded-lg hover:bg-gray-100"
+          onclick="toggleMenu()" id="mobilebutton">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 16H28" stroke="#2290D5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 8H28" stroke="#2290D5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 24H28" stroke="#2290D5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+        </button>
+
+        <!-- Logo (Desktop View) - Removed negative margin -->
+        <a href="/" class="hidden lg:flex">
+          <img src="./images/logo.png" alt="Skill Rank Logo" class="h-8 w-auto">
+        </a>
+
+        <!-- Desktop Navigation (Centered Items) -->
+        <ul class="hidden lg:flex flex-1 justify-center space-x-6 text-gray-900 font-medium gap-4">
+          <li><a href="#"
+              class="hover:text-[#2290D5] gap-[10px] font-roboto font-normal text-[16px] text-[#7F7F7F] hover:text-[#2290D5]">Home</a>
+          </li>
+
+          <!-- Services Dropdown -->
+          <li class="relative group">
+            <a href="#"
+              class="flex items-center hover:text-[#2290D5] gap-[10px] font-roboto font-normal text-[16px] text-[#7F7F7F]">
+              Services
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+            <div
+              class="absolute left-0 mt-2 w-60 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div class="py-2 px-4 border border-gray-100 rounded-md">
+                <a href="#" class="block py-2 text-sm text-gray-700 hover:text-[#2290D5]">Government Technology
+                  Services</a>
+                <a href="#" class="block py-2 text-sm text-gray-700 hover:text-[#2290D5]">Cloud and Infrastructure
+                  Solutions</a>
+                <a href="#" class="block py-2 text-sm text-gray-700 hover:text-[#2290D5]">Cyber Security</a>
+                <a href="#" class="block py-2 text-sm text-gray-700 hover:text-[#2290D5]">Custom Software
+                  Development</a>
+                <a href="#" class="block py-2 text-sm text-gray-700 hover:text-[#2290D5]">Business Intelligence</a>
+                <a href="#" class="block py-2 text-sm text-gray-700 hover:text-[#2290D5]">Generative AI & Artificial
+                  Intelligence</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Solutions Dropdown -->
+          <li class="relative group">
+            <a href="#"
+              class="flex items-center hover:text-[#2290D5] gap-[10px] font-roboto font-normal text-[16px] text-[#7F7F7F]">
+              Solutions
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+            <div
+              class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div class="py-2 px-4 border border-gray-100 rounded-md">
+                <a href="#" class="block py-2 text-sm text-gray-700 hover:text-[#2290D5]">CivicSight</a>
+                <a href="#" class="block py-2 text-sm text-gray-700 hover:text-[#2290D5]">SkillTest</a>
+              </div>
+            </div>
+          </li>
+
+          <li><a href="./about.html"
+              class="hover:text-[#2290D5] gap-[10px] font-roboto font-normal text-[16px] text-[#7F7F7F] hover:text-[#2290D5]">About
+              Us</a></li>
+          <li><a href="#"
+              class="hover:text-[#2290D5] gap-[10px] font-roboto font-normal text-[16px] text-[#7F7F7F] hover:text-[#2290D5]">Careers</a>
+          </li>
+        </ul>
+
+        <!-- Contact Us Button (Always on Right) -->
+        <a href="#"
+          class="w-[169px] h-[49px] px-[40px] py-[18px] border rounded-[32px] flex items-center justify-center gap-[10px] text-white bg-[#2290D5]">
+          Contact Us
+        </a>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Sidebar Menu -->
+  <!-- Mobile Sidebar Menu -->
+  <div id="mobile-menu"
+    class="fixed top-0 left-0 w-64 h-full  transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+    <!-- Nav Icon at Top -->
+
+
+    <!-- Sidebar Content -->
+    <div class="h-full flex flex-col justify-start pt-[80%] bg-white>
+      <button type=" button"
+      class="lg:hidden inline-flex items-center  p-2 w-10 h-10 justify-center text-gray-500 rounded-lg hover:bg-gray-100"
+      onclick="toggleMenu()" id="mobilebutton">
+      <path d="M4 16H28" stroke="#2290D5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M4 8H28" stroke="#2290D5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M4 24H28" stroke="#2290D5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      </button>
+
+
+      <div class="bg-white p-4 pb-[324px] border-gray-100">
+        <a href="/" class="lg:flex ">
+          <img src="./images/logo.png" alt="Skill Rank Logo" class="w-32 mb-6 mt-6">
+        </a>
+
+
+        <ul class="flex flex-col font-medium space-y-2">
+          <!-- Home -->
+          <li class="flex items-center space-x-3 px-4 py-2">
+            <img src="./images/Home icon.png" alt="Home Icon" class="w-6 h-6">
+            <a href="#"
+              class="text-gray-900  focus:outline-none ">Home</a>
+          </li>
+
+          <!-- Services Dropdown -->
+          <li class="flex items-center space-x-3 px-4 py-2">
+            <img src="./images/Services icon.png" alt="Services Icon" class="w-6 h-6">
+            <button onclick="toggleSubMenu('services-submenu')"
+              class="flex items-center justify-between w-full text-gray-900  focus:outline-none">
+              Services
+              <svg id="services-arrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+          </li>
+          <ul id="services-submenu" class="hidden pl-12 space-y-1">
+            <li><a href="#"
+                class="block py-2 text-sm text-gray-700 hover:text-[#2290D5] focus:outline-none">Government
+                Technology Services</a></li>
+            <li><a href="#"
+                class="block py-2 text-sm text-gray-700 hover:text-[#2290D5] focus:outline-none">Cloud
+                and Infrastructure Solutions</a></li>
+            <li><a href="#"
+                class="block py-2 text-sm text-gray-700 hover:text-[#2290D5] focus:outline-none">Cyber
+                Security</a></li>
+            <li><a href="#"
+                class="block py-2 text-sm text-gray-700 hover:text-[#2290D5] focus:outline-none">Custom
+                Software Development</a></li>
+            <li><a href="./businesservice.html"
+                class="block py-2 text-sm text-gray-700 hover:text-[#2290D5] focus:outline-none">Business
+                Intelligence</a></li>
+            <li><a href="#"
+                class="block py-2 text-sm text-gray-700 hover:text-[#2290D5] focus:outline-none">Generative
+                AI & Artificial Intelligence</a></li>
+          </ul>
+
+          <!-- Solutions Dropdown -->
+          <li class="flex items-center space-x-3 px-4 py-2">
+            <img src="./images/Solutions icon.png" alt="Solutions Icon" class="w-6 h-6">
+            <button onclick="toggleSubMenu('solutions-submenu')"
+              class="flex items-center justify-between w-full text-gray-900 hover:bg-gray-100 focus:outline-none">
+              Solutions
+              <svg id="solutions-arrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+          </li>
+          <ul id="solutions-submenu" class="hidden pl-12 space-y-1">
+            <li><a href="#"
+                class="block py-2 text-sm text-gray-700 hover:text-[#2290D5] focus:outline-none">CivicSight</a>
+            </li>
+            <li><a href="#"
+                class="block py-2 text-sm text-gray-700 hover:text-[#2290D5] focus:outline-none">SkillTest</a>
+            </li>
+          </ul>
+
+          <!-- About Us -->
+          <li class="flex items-center space-x-3 px-4 py-2">
+            <img src="./images/About us icon.png" alt="About Icon" class="w-6 h-6">
+            <a href="./about.html"
+              class="text-gray-900 hover:bg-gray-100 focus:outline-none">About Us</a>
+          </li>
+
+          <!-- Careers -->
+          <li class="flex items-center space-x-3 px-4 py-2">
+            <img src="./images/Carreer icon.png" alt="Careers Icon" class="w-6 h-6">
+            <a href="#"
+              class="text-gray-900 hover:bg-gray-100 focus:outline-none">Careers</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript for Sidebar Toggle and Submenus -->
+  <script>
+    // Function to toggle mobile menu
+    function toggleMenu() {
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenu.classList.toggle("-translate-x-full");
+    }
+
+    // Function to toggle submenus
+    function toggleSubMenu(id) {
+      const submenu = document.getElementById(id);
+      const arrow = document.getElementById(id.split('-')[0] + '-arrow');
+      const isExpanded = submenu.classList.toggle("hidden");
+      arrow.classList.toggle("rotate-180", !isExpanded);
+      submenu.setAttribute("aria-expanded", !isExpanded);
+      // Stop the event from bubbling up
+      event.stopPropagation();
+    }
+
+    // Function to handle responsive behavior
+    function handleResponsiveNav() {
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (window.innerWidth > 1000) {
+        // Hide mobile sidebar for screens wider than 1000px
+        mobileMenu.classList.add("-translate-x-full");
+      }
+    }
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResponsiveNav);
+
+    // Execute on page load to set initial state
+    document.addEventListener('DOMContentLoaded', handleResponsiveNav);
+  </script>
+
+  <!-- Main Content -->
+  <div class="min-h-screen bg-white">
+    <!-- Hero Section -->
+    <div class="relative h-[200px] md:h-[300px]">
+      <div class="absolute inset-0 bg-black/50 z-10"></div>
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80"
+        alt="Office space" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 z-20 flex items-center justify-center">
+        <p class="font-[Poppins] font-bold text-3xl md:text-[40px] leading-tight text-white text-center">About Us</p>
+      </div>
+    </div>
+
+    <!-- Who We Are Section -->
+    <section class="px-4 py-12 md:p-16 lg:p-24 bg-[#F7FBFF]">
+      <div class="container mx-auto">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="font-medium text-[16px] leading-[18.75px] tracking-[3%] text-[#2290D5]">WHO WE ARE</h3>
+            <h2 class="font-[Poppins] font-bold text-2xl md:text-[32px] leading-normal tracking-normal pt-4 pb-4">
+              Innovators in Technology</h2>
+            <div class="w-16 h-[1px] border-[1.5px] border-[#2290D5]"></div>
+          </div>
+          <div>
+            <p
+              class="font-[Roboto] font-normal text-[16px] leading-[24px] tracking-normal text-[#7F7F7F] bg-[#FFFFFF] mb-4">
+              SkillRank is a pioneering technology consulting firm specializing in enterprise innovation and digital
+              transformation. We excel in delivering cutting-edge solutions across secure cloud infrastructure, custom
+              software development, and AI integration, transforming complex challenges into streamlined solutions that
+              drive measurable business value.
+            </p>
+            <p class="font-[Roboto] font-normal text-[16px] leading-[24px] tracking-normal text-[#7F7F7F] bg-[#FFFFFF]">
+              Through our innovative Incubation Lab and comprehensive service portfolio spanning AI Solutions, Cloud
+              Infrastructure, Custom Technology Development, and Cybersecurity, we co-pilot enterprise innovation while
+              maintaining operational excellence. Our proven Zero to One Journey approach helps organizations achieve
+              remarkable growth potential by balancing core services with future innovation, consistently delivering
+              results that enhance efficiency and transform operations across diverse industries.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <!-- Why Choose Us Section -->
+    <section class="py-12 px-4 md:px-8 lg:px-16">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- Left Section (Text + Metrics) -->
+          <div class="lg:col-span-6">
+            <h3 class="font-medium text-[16px] leading-[18.75px] tracking-[3%] text-[#2290D5]">WHY CHOOSE US</h3>
+            <h2 class="font-[Poppins] font-bold text-2xl md:text-[32px] leading-normal tracking-normal pt-4 pb-4">
+              Driving Innovation & Excellence
+            </h2>
+            <div class="w-16 h-[1px] border-[1.5px] border-[#2290D5]"></div>
+            <p class="font-[Roboto] text-[16px] text-[#7F7F7F] leading-relaxed mt-4 max-w-lg">
+              At SkillRank, we combine deep industry expertise with cutting-edge technology to deliver secure, scalable,
+              and innovative solutions. Our commitment to compliance, AI-driven innovation, and future-ready technology
+              ensures that businesses and governments stay ahead in an evolving digital landscape.
+            </p>
+
+            <!-- Metrics Section -->
+            <div class="flex flex-col gap-6 mt-8">
+              <!-- First Metric -->
+              <div class="flex flex-row items-start gap-4">
+                <div class="w-24">
+                  <div class="font-[Roboto] font-extrabold text-[40px] leading-tight text-[#FF8C00]">50+</div>
+                  <div class="font-[Roboto] font-medium text-[13px] text-[#FF8C00] pt-2">Successful Projects</div>
+                </div>
+                <p class="font-[Roboto] font-normal text-[16px] leading-[24px] tracking-normal text-[#7F7F7F] flex-1">
+                  Successfully delivered advanced solutions across industries.
+                </p>
+              </div>
+            
+              <!-- Second Metric -->
+              <div class="flex flex-row items-start gap-4">
+                <div class="w-24">
+                  <div class="font-[Roboto] font-extrabold text-[40px] leading-tight text-[#FF8C00]">3M+</div>
+                  <div class="font-[Roboto] font-medium text-[13px] text-[#FF8C00] pt-2">Users Engaged</div>
+                </div>
+                <p class="font-[Roboto] font-normal text-[16px] leading-[24px] tracking-normal text-[#7F7F7F] flex-1">
+                  Strategic project implementation drove user growth and service excellence.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+
+          <!-- Right Section (Cards) -->
+          <div class="lg:col-span-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Card 01 -->
+            <div class="p-6 border border-[#C6DCF2] bg-[#F8FCFF] rounded-[32px]">
+              <h1 class="font-[Poppins] font-semibold text-[32px] pb-3 text-[#2290D5]">01</h1>
+              <h3 class="font-[Poppins] font-semibold text-[16px] text-[#2290D5] pb-3">Proven Expertise</h3>
+              <p class="font-[Roboto] text-[14px] text-[#7F7F7F]">
+                Leveraging years of technical excellence and industry knowledge to deliver sophisticated solutions.
+              </p>
+            </div>
+
+            <!-- Card 02 -->
+            <div class="p-6 border border-[#C6DCF2] bg-[#F8FCFF] rounded-[32px]">
+              <h1 class="font-[Poppins] font-semibold text-[32px] pb-3 text-[#2290D5]">02</h1>
+              <h3 class="font-[Poppins] font-semibold text-[16px] text-[#2290D5] pb-3">Security & Compliance</h3>
+              <p class="font-[Roboto] text-[14px] text-[#7F7F7F]">
+                Implementing robust security frameworks and industry best practices to ensure data protection.
+              </p>
+            </div>
+
+            <!-- Card 03 -->
+            <div class="p-6 border border-[#C6DCF2] bg-[#F8FCFF] rounded-[32px]">
+              <h1 class="font-[Poppins] font-semibold text-[32px] pb-3 text-[#2290D5]">03</h1>
+              <h3 class="font-[Poppins] font-semibold text-[16px] text-[#2290D5] pb-3">Innovation-Driven</h3>
+              <p class="font-[Roboto] text-[14px] text-[#7F7F7F]">
+                Pioneering AI-powered solutions and advanced technologies to enhance efficiency and create advantages.
+              </p>
+            </div>
+
+            <!-- Card 04 -->
+            <div class="p-6 border border-[#C6DCF2] bg-[#F8FCFF] rounded-[32px]">
+              <h1 class="font-[Poppins] font-semibold text-[32px] pb-3 text-[#2290D5]">04</h1>
+              <h3 class="font-[Poppins] font-semibold text-[16px] text-[#2290D5] pb-3">Future-Ready Solutions</h3>
+              <p class="font-[Roboto] text-[14px] text-[#7F7F7F]">
+                Developing scalable, adaptable solutions that evolve with your business while ensuring long-term growth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div class="space-y-4">
+            <a href="/" class="flex items-center">
+              <img src="./images/whitelogo.png" alt="Skill Rank Logo" class="w-[180px] h-auto" />
+            </a>
+            <img src="./images/footer text.png" alt="Skill Rank Logo" class="w-full max-w-[382px] h-auto" />
+
+            <a href="https://linkedin.com" class="inline-block">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="ml-4">
+                <g clip-path="url(#clip0_988_1941)">
+                  <path
+                    d="M12.5 12H9.5C9.224 12 9 12.224 9 12.5V23.5C9 23.776 9.224 24 9.5 24H12.5C12.776 24 13 23.776 13 23.5V12.5C13 12.224 12.776 12 12.5 12ZM12 23H10V13H12V23Z"
+                    fill="#E0E0E0" />
+                  <path
+                    d="M11 7C9.897 7 9 7.897 9 9C9 10.103 9.897 11 11 11C12.103 11 13 10.103 13 9C13 7.897 12.103 7 11 7ZM11 10C10.448 10 10 9.551 10 9C10 8.449 10.448 8 11 8C11.552 8 12 8.449 12 9C12 9.551 11.552 10 11 10Z"
+                    fill="#E0E0E0" />
+                  <path
+                    d="M19.515 11.986C18.981 11.986 18.418 12.105 17.961 12.306C17.886 12.126 17.707 12 17.5 12H14.5C14.224 12 14 12.224 14 12.5V23.5C14 23.776 14.224 24 14.5 24H17.5C17.776 24 18 23.776 18 23.5L17.998 16.839C17.998 16.836 17.986 16.503 18.198 16.274C18.365 16.092 18.65 16 19.044 16C19.696 16 20 16.279 20 16.879V23.5C20 23.776 20.224 24 20.5 24H23.5C23.776 24 24 23.776 24 23.5V16.658C24 13.21 21.584 11.986 19.515 11.986ZM23 23H21V16.879C21 15.72 20.251 15 19.044 15C18.36 15 17.828 15.2 17.463 15.595C16.956 16.144 16.995 16.841 17 16.879V23H15V13H17V13.355C17 13.631 17.224 13.855 17.5 13.855C17.745 13.855 17.948 13.679 17.991 13.447C18.125 13.301 18.713 12.987 19.514 12.987C20.331 12.987 22.999 13.252 22.999 16.658L23 23Z"
+                    fill="#E0E0E0" />
+                  <path
+                    d="M16.0001 -0.0349731C7.15806 -0.0349731 -0.0339355 7.15903 -0.0339355 16C-0.0339355 24.841 7.15806 32.035 16.0001 32.035C24.8421 32.035 32.0341 24.841 32.0341 16C32.0341 7.15903 24.8421 -0.0349731 16.0001 -0.0349731ZM16.0001 30.965C7.74806 30.965 1.03406 24.252 1.03406 16C1.03406 7.74803 7.74806 1.03503 16.0001 1.03503C24.2521 1.03503 30.9661 7.74803 30.9661 16C30.9661 24.252 24.2521 30.965 16.0001 30.965Z"
+                    fill="#E0E0E0" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_988_1941">
+                    <rect width="32" height="32" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+
+          <div class="sm:ml-0 md:ml-8 lg:ml-16">
+            <h4 class="font-[Roboto] font-normal text-[14px] leading-[21px] tracking-normal text-[#7F7F7F] mb-4">
+              Company
+            </h4>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="/about.html"
+                  class="font-[Roboto] font-normal text-[16px] leading-[24px] tracking-normal text-[#E0E0E0] hover:text-[#2290D5] transition-colors duration-300">Home</a>
+              </li>
+              <li><a href="/about.html"
+                  class="font-[Roboto] font-normal text-[16px] leading-[24px] tracking-normal text-[#E0E0E0] hover:text-[#2290D5] transition-colors duration-300">About
+                  Us</a></li>
+              <li><a href="#"
+                  class="font-[Roboto] font-normal text-[16px] leading-[24px] tracking-normal text-[#E0E0E0] hover:text-[#2290D5] transition-colors duration-300">Career</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-['Roboto'] font-medium text-[16px] leading-[24px] tracking-normal text-[#7F7F7F] mb-4">
+              Services</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="#"
+                  class="font-[Roboto] font-normal text-[16px] leading-[24px] tracking-normal text-[#E0E0E0] hover:text-[#2290D5] transition-colors duration-300">Government
+                  Technology Services</a></li>
+              <li><a href="#"
+                  class="font-[Roboto] font-normal text-[16px] leading-[24px] tracking-normal text-[#E0E0E0] hover:text-[#2290D5] transition-colors duration-300">Cloud
+                  and Infrastructure Solutions</a></li>
+              <li><a href="#"
+                  class="font-[Roboto] font-normal text-[16px] leading-[24px] tracking-normal text-[#E0E0E0] hover:text-[#2290D5] transition-colors duration-300">Cyber
+                  Security</a></li>
+              <li><a href="#"
+                  class="font-[Roboto] font-normal text-[16px] leading-[24px] tracking-normal text-[#E0E0E0] hover:text-[#2290D5] transition-colors duration-300">Custom
+                  Software Development</a></li>
+              <li><a href="./businesservice.html"
+                  class="font-[Roboto] font-normal text-[16px] leading-[24px] tracking-normal text-[#E0E0E0] hover:text-[#2290D5] transition-colors duration-300">Business
+                  Intelligence</a></li>
+              <li><a href="#"
+                  class="font-[Roboto] font-normal text-[16px] leading-[24px] tracking-normal text-[#E0E0E0] hover:text-[#2290D5] transition-colors duration-300">Generative
+                  AI & Artificial Intelligence</a></li>
+            </ul>
+          </div>
+
+          <div class="sm:ml-0 md:ml-8">
+            <h4 class="font-[Roboto] font-normal text-[14px] leading-[21px] tracking-normal text-[#7F7F7F] mb-4">
+              Solutions</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="#"
+                  class="font-[Roboto] font-normal text-[16px] leading-[24px] tracking-normal text-[#E0E0E0] hover:text-[#2290D5] transition-colors duration-300">CivicSight</a>
+              </li>
+              <li><a href="#"
+                  class="font-[Roboto] font-normal text-[16px] leading-[24px] tracking-normal text-[#E0E0E0] hover:text-[#2290D5] transition-colors duration-300">SkillTest</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-[Roboto] font-normal text-[14px] leading-[21px] tracking-normal text-[#7F7F7F] mb-4">
+              Contact
+            </h4>
+            <div class="text-gray-400">
+              <svg width="179" height="97" viewBox="0 0 179 97" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="w-auto h-auto">
+                <path
+                  d="M14.1428 7.54545C14.1428 12.6364 7.64282 17 7.64282 17C7.64282 17 1.14282 12.6364 1.14282 7.54545C1.14282 5.80949 1.82764 4.14463 3.04663 2.91712C4.26561 1.68961 5.91892 1 7.64282 1C9.36673 1 11.02 1.68961 12.239 2.91712C13.458 4.14463 14.1428 5.80949 14.1428 7.54545Z"
+                  stroke="#E0E0E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M7.64274 9.72728C8.83936 9.72728 9.80941 8.75045 9.80941 7.54547C9.80941 6.34048 8.83936 5.36365 7.64274 5.36365C6.44612 5.36365 5.47607 6.34048 5.47607 7.54547C5.47607 8.75045 6.44612 9.72728 7.64274 9.72728Z"
+                  stroke="#E0E0E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="font-[Roboto] font-normal text-[12px] leading-[14.06px] tracking-normal text-[#7F7F7F] text-center mt-12">
+          <p class="m-0">© 2025 Skillrank. All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+</body>
+
+</html>
